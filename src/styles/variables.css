@@ -1,0 +1,114 @@
+:root {
+  /* Primary color — customizable via PersianUIProvider */
+  --pui-primary: #0EA5E9;
+  --pui-primary-hover: #0284C7;
+  --pui-primary-active: #0369A1;
+  --pui-primary-foreground: #FFFFFF;
+  --pui-primary-subtle: #E0F2FE;
+
+  /* Secondary color */
+  --pui-secondary: #F97316;
+  --pui-secondary-hover: #EA6C00;
+  --pui-secondary-active: #C2410C;
+  --pui-secondary-foreground: #FFFFFF;
+  --pui-secondary-subtle: #FFF7ED;
+
+  /* Neutral */
+  --pui-background: #FFFFFF;
+  --pui-foreground: #0F172A;
+  --pui-muted: #F1F5F9;
+  --pui-muted-foreground: #64748B;
+  --pui-border: #E2E8F0;
+  --pui-border-hover: #CBD5E1;
+  --pui-input-bg: #FFFFFF;
+
+  /* Semantic */
+  --pui-success: #22C55E;
+  --pui-success-foreground: #FFFFFF;
+  --pui-success-subtle: #F0FDF4;
+  --pui-warning: #F59E0B;
+  --pui-warning-foreground: #FFFFFF;
+  --pui-warning-subtle: #FFFBEB;
+  --pui-error: #EF4444;
+  --pui-error-foreground: #FFFFFF;
+  --pui-error-subtle: #FEF2F2;
+  --pui-info: #3B82F6;
+  --pui-info-foreground: #FFFFFF;
+  --pui-info-subtle: #EFF6FF;
+
+  /* Surface / Overlay */
+  --pui-surface: #FFFFFF;
+  --pui-surface-elevated: #FFFFFF;
+  --pui-overlay: rgba(0, 0, 0, 0.5);
+
+  /* Typography */
+  --pui-font-family: 'Vazir', 'Tahoma', system-ui, sans-serif;
+  --pui-font-size-xs: 0.75rem;
+  --pui-font-size-sm: 0.875rem;
+  --pui-font-size-md: 1rem;
+  --pui-font-size-lg: 1.125rem;
+  --pui-font-size-xl: 1.25rem;
+  --pui-font-size-2xl: 1.5rem;
+  --pui-font-size-3xl: 1.875rem;
+  --pui-font-size-4xl: 2.25rem;
+
+  /* Border radius */
+  --pui-radius-sm: 4px;
+  --pui-radius: 8px;
+  --pui-radius-md: 8px;
+  --pui-radius-lg: 12px;
+  --pui-radius-xl: 16px;
+  --pui-radius-full: 9999px;
+
+  /* Spacing */
+  --pui-space-1: 0.25rem;
+  --pui-space-2: 0.5rem;
+  --pui-space-3: 0.75rem;
+  --pui-space-4: 1rem;
+  --pui-space-5: 1.25rem;
+  --pui-space-6: 1.5rem;
+  --pui-space-8: 2rem;
+  --pui-space-10: 2.5rem;
+  --pui-space-12: 3rem;
+
+  /* Shadows */
+  --pui-shadow-sm: 0 1px 2px 0 rgba(0,0,0,0.05);
+  --pui-shadow: 0 1px 3px 0 rgba(0,0,0,0.1), 0 1px 2px -1px rgba(0,0,0,0.1);
+  --pui-shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+  --pui-shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+  --pui-shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
+
+  /* Transitions */
+  --pui-transition-fast: 100ms ease;
+  --pui-transition: 150ms ease;
+  --pui-transition-slow: 300ms ease;
+
+  /* Z-index */
+  --pui-z-dropdown: 1000;
+  --pui-z-sticky: 1100;
+  --pui-z-modal: 1200;
+  --pui-z-toast: 1400;
+  --pui-z-tooltip: 1500;
+}
+
+[data-pui-theme="dark"] {
+  --pui-background: #0F172A;
+  --pui-foreground: #F8FAFC;
+  --pui-muted: #1E293B;
+  --pui-muted-foreground: #94A3B8;
+  --pui-border: #334155;
+  --pui-border-hover: #475569;
+  --pui-input-bg: #1E293B;
+  --pui-surface: #1E293B;
+  --pui-surface-elevated: #293548;
+  --pui-primary-subtle: #0C4A6E;
+  --pui-secondary-subtle: #431407;
+  --pui-success-subtle: #052E16;
+  --pui-warning-subtle: #422006;
+  --pui-error-subtle: #450A0A;
+  --pui-info-subtle: #172554;
+  --pui-shadow-sm: 0 1px 2px 0 rgba(0,0,0,0.3);
+  --pui-shadow: 0 1px 3px 0 rgba(0,0,0,0.4), 0 1px 2px -1px rgba(0,0,0,0.4);
+  --pui-shadow-md: 0 4px 6px -1px rgba(0,0,0,0.4), 0 2px 4px -2px rgba(0,0,0,0.4);
+  --pui-shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.4), 0 4px 6px -4px rgba(0,0,0,0.4);
+}

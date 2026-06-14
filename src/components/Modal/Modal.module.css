@@ -1,0 +1,84 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--pui-overlay);
+  z-index: var(--pui-z-modal);
+  animation: fadeIn 150ms ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translate(-50%, -48%) scale(0.97); }
+  to   { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+
+.content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--pui-surface);
+  border-radius: var(--pui-radius-xl);
+  box-shadow: var(--pui-shadow-xl);
+  z-index: calc(var(--pui-z-modal) + 1);
+  direction: rtl;
+  font-family: var(--pui-font-family);
+  animation: slideUp 150ms ease;
+  display: flex;
+  flex-direction: column;
+  max-height: 90vh;
+}
+
+.size-sm   { width: min(380px, 95vw); }
+.size-md   { width: min(520px, 95vw); }
+.size-lg   { width: min(720px, 95vw); }
+.size-xl   { width: min(960px, 95vw); }
+.size-full { width: 95vw; height: 95vh; }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--pui-space-5) var(--pui-space-5) 0;
+  flex-shrink: 0;
+}
+
+.title {
+  font-size: var(--pui-font-size-lg);
+  font-weight: 700;
+  color: var(--pui-foreground);
+  margin: 0;
+}
+
+.closeBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--pui-radius);
+  border: none;
+  background: transparent;
+  color: var(--pui-muted-foreground);
+  cursor: pointer;
+  transition: background var(--pui-transition);
+  flex-shrink: 0;
+}
+.closeBtn:hover { background: var(--pui-muted); color: var(--pui-foreground); }
+
+.description { padding: var(--pui-space-2) var(--pui-space-5) 0; color: var(--pui-muted-foreground); font-size: var(--pui-font-size-sm); }
+
+.body { padding: var(--pui-space-5); flex: 1; overflow-y: auto; }
+
+.footer {
+  padding: var(--pui-space-4) var(--pui-space-5);
+  border-top: 1px solid var(--pui-border);
+  display: flex;
+  gap: var(--pui-space-2);
+  justify-content: flex-end;
+  flex-shrink: 0;
+}

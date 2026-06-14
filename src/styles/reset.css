@@ -1,0 +1,33 @@
+/* RTL-aware reset for Persian UI Kit */
+.pui-root,
+.pui-root * {
+  box-sizing: border-box;
+  direction: rtl;
+  text-align: right;
+  font-family: var(--pui-font-family);
+}
+
+.pui-root *:focus-visible {
+  outline: 2px solid var(--pui-primary);
+  outline-offset: 2px;
+}
+
+/* Utility: screen-reader only */
+.pui-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Flex / grid RTL utilities */
+.pui-flex { display: flex; }
+.pui-flex-col { flex-direction: column; }
+.pui-items-center { align-items: center; }
+.pui-gap-2 { gap: var(--pui-space-2); }
+.pui-gap-3 { gap: var(--pui-space-3); }

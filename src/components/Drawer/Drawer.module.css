@@ -1,0 +1,32 @@
+.overlay { position: fixed; inset: 0; background: var(--pui-overlay); z-index: var(--pui-z-modal); animation: fadeIn 150ms ease; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.content {
+  position: fixed;
+  background: var(--pui-surface);
+  box-shadow: var(--pui-shadow-xl);
+  z-index: calc(var(--pui-z-modal) + 1);
+  direction: rtl;
+  font-family: var(--pui-font-family);
+  display: flex;
+  flex-direction: column;
+}
+.content:focus { outline: none; }
+
+.side-right  { top: 0; right: 0; height: 100vh; border-left:  1px solid var(--pui-border); animation: slideFromRight 250ms ease; }
+.side-left   { top: 0; left:  0; height: 100vh; border-right: 1px solid var(--pui-border); animation: slideFromLeft  250ms ease; }
+.side-bottom { bottom: 0; left: 0; right: 0; max-height: 85vh; border-radius: var(--pui-radius-xl) var(--pui-radius-xl) 0 0; animation: slideFromBottom 250ms ease; }
+.side-top    { top: 0;    left: 0; right: 0; max-height: 85vh; border-radius: 0 0 var(--pui-radius-xl) var(--pui-radius-xl); animation: slideFromTop 250ms ease; }
+
+@keyframes slideFromRight  { from { transform: translateX(100%); } to { transform: translateX(0); } }
+@keyframes slideFromLeft   { from { transform: translateX(-100%); } to { transform: translateX(0); } }
+@keyframes slideFromBottom { from { transform: translateY(100%); } to { transform: translateY(0); } }
+@keyframes slideFromTop    { from { transform: translateY(-100%); } to { transform: translateY(0); } }
+
+.header { display: flex; align-items: center; justify-content: space-between; padding: var(--pui-space-5); border-bottom: 1px solid var(--pui-border); flex-shrink: 0; }
+.title { font-size: var(--pui-font-size-lg); font-weight: 700; color: var(--pui-foreground); margin: 0; }
+.closeBtn { display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: var(--pui-radius); border: none; background: transparent; color: var(--pui-muted-foreground); cursor: pointer; transition: background var(--pui-transition); }
+.closeBtn:hover { background: var(--pui-muted); color: var(--pui-foreground); }
+.description { padding: var(--pui-space-3) var(--pui-space-5) 0; color: var(--pui-muted-foreground); font-size: var(--pui-font-size-sm); }
+.body { flex: 1; overflow-y: auto; padding: var(--pui-space-5); }
+.footer { padding: var(--pui-space-4) var(--pui-space-5); border-top: 1px solid var(--pui-border); display: flex; gap: var(--pui-space-2); flex-shrink: 0; }

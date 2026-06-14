@@ -1,0 +1,21 @@
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--pui-muted) 25%,
+    var(--pui-border) 50%,
+    var(--pui-muted) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: var(--pui-radius-sm);
+  direction: rtl;
+}
+
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.circle { border-radius: 50%; }
+
+.lines { display: flex; flex-direction: column; gap: var(--pui-space-2); direction: rtl; }

@@ -1,0 +1,39 @@
+.wrapper { display: flex; flex-direction: column; gap: var(--pui-space-2); direction: rtl; font-family: var(--pui-font-family); }
+.label { font-size: var(--pui-font-size-sm); font-weight: 500; color: var(--pui-foreground); }
+
+.zone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--pui-space-2);
+  padding: var(--pui-space-8);
+  border: 2px dashed var(--pui-border);
+  border-radius: var(--pui-radius-lg);
+  cursor: pointer;
+  transition: all var(--pui-transition);
+  text-align: center;
+}
+.zone:hover:not(.disabled) { border-color: var(--pui-primary); background: var(--pui-primary-subtle); }
+.dragOver { border-color: var(--pui-primary); background: var(--pui-primary-subtle); }
+.disabled { opacity: 0.5; cursor: not-allowed; }
+.hasError { border-color: var(--pui-error); }
+
+.hiddenInput { display: none; }
+
+.uploadIcon { color: var(--pui-muted-foreground); }
+.zone:hover .uploadIcon, .dragOver .uploadIcon { color: var(--pui-primary); }
+
+.zoneText { font-size: var(--pui-font-size-md); color: var(--pui-foreground); margin: 0; }
+.browseLink { color: var(--pui-primary); font-weight: 600; }
+.zoneHint { font-size: var(--pui-font-size-xs); color: var(--pui-muted-foreground); margin: 0; }
+
+.fileList { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--pui-space-2); }
+.fileItem { display: flex; align-items: center; gap: var(--pui-space-2); padding: var(--pui-space-2) var(--pui-space-3); background: var(--pui-muted); border-radius: var(--pui-radius); }
+.fileIcon { color: var(--pui-primary); flex-shrink: 0; }
+.fileName { flex: 1; font-size: var(--pui-font-size-sm); color: var(--pui-foreground); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.fileSize { font-size: var(--pui-font-size-xs); color: var(--pui-muted-foreground); flex-shrink: 0; }
+.removeBtn { background: none; border: none; color: var(--pui-muted-foreground); cursor: pointer; display: flex; padding: 2px; border-radius: 4px; }
+.removeBtn:hover { color: var(--pui-error); background: var(--pui-error-subtle); }
+
+.error { font-size: var(--pui-font-size-xs); color: var(--pui-error); }

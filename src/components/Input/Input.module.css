@@ -1,0 +1,96 @@
+.wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--pui-space-1);
+  direction: rtl;
+}
+
+.fullWidth { width: 100%; }
+.fullWidth .inputWrapper { width: 100%; }
+
+.label {
+  font-family: var(--pui-font-family);
+  font-size: var(--pui-font-size-sm);
+  font-weight: 500;
+  color: var(--pui-foreground);
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.required { color: var(--pui-error); margin-right: 2px; }
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  background: var(--pui-input-bg);
+  border: 1.5px solid var(--pui-border);
+  border-radius: var(--pui-radius);
+  transition: border-color var(--pui-transition), box-shadow var(--pui-transition);
+  position: relative;
+}
+
+.inputWrapper:focus-within {
+  border-color: var(--pui-primary);
+  box-shadow: 0 0 0 3px var(--pui-primary-subtle);
+}
+
+.inputWrapper.hasError {
+  border-color: var(--pui-error);
+}
+.inputWrapper.hasError:focus-within {
+  box-shadow: 0 0 0 3px var(--pui-error-subtle);
+}
+
+.variant-filled {
+  background: var(--pui-muted);
+  border-color: transparent;
+}
+.variant-filled:focus-within {
+  background: var(--pui-input-bg);
+}
+
+.size-sm { height: 34px; }
+.size-md { height: 40px; }
+.size-lg { height: 48px; }
+
+.input {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: var(--pui-font-family);
+  font-size: var(--pui-font-size-md);
+  color: var(--pui-foreground);
+  text-align: right;
+  direction: rtl;
+  width: 100%;
+}
+
+.size-sm .input { font-size: var(--pui-font-size-sm); padding: 0 var(--pui-space-2); }
+.size-md .input { padding: 0 var(--pui-space-3); }
+.size-lg .input { font-size: var(--pui-font-size-lg); padding: 0 var(--pui-space-4); }
+
+.input::placeholder { color: var(--pui-muted-foreground); }
+
+.startIcon, .endIcon {
+  display: flex;
+  align-items: center;
+  color: var(--pui-muted-foreground);
+  flex-shrink: 0;
+}
+.startIcon { padding-right: var(--pui-space-3); order: 2; }
+.endIcon   { padding-left:  var(--pui-space-3); order: 0; }
+
+.error {
+  font-family: var(--pui-font-family);
+  font-size: var(--pui-font-size-xs);
+  color: var(--pui-error);
+}
+
+.hint {
+  font-family: var(--pui-font-family);
+  font-size: var(--pui-font-size-xs);
+  color: var(--pui-muted-foreground);
+}
