@@ -1,7 +1,6 @@
 import React, { useCallback, useId, useMemo, useRef, useState } from 'react'
 import * as Popover from '@radix-ui/react-popover'
-// eslint-disable-next-line @typescript-eslint/no-require-imports
-const jalaali = require('jalaali-js') as { toJalaali: (gy: number, gm: number, gd: number) => { jy: number; jm: number; jd: number }; toGregorian: (jy: number, jm: number, jd: number) => { gy: number; gm: number; gd: number }; jalaaliMonthLength: (jy: number, jm: number) => number; isLeapJalaaliYear: (jy: number) => boolean }
+import * as jalaali from 'jalaali-js'
 import { cn } from '../../utils/cn'
 import { toPersianDigits, toEnglishDigits } from '../../utils/persian'
 import { ChevronRightIcon, ChevronLeftIcon, CalendarIcon } from '../Icons'

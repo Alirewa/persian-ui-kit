@@ -1,6 +1,4 @@
 // Styles — import in your app: import 'persian-ui-kit/styles'
-export type {} from './styles/index.css'
-
 // Provider
 export { PersianUIProvider } from './providers/PersianUIProvider'
 export type { PersianUIProviderProps, Theme, Radius, ThemeColors } from './providers/PersianUIProvider'

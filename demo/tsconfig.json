@@ -12,5 +12,5 @@
       "persian-ui-kit/styles": ["../src/styles/index.css"]
     }
   },
-  "include": ["src"]
+  "include": ["src", "../src/types.d.ts"]
 }
