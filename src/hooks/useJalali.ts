@@ -1,5 +1,6 @@
 import { useMemo } from 'react'
-import jalaali from 'jalaali-js'
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const jalaali = require('jalaali-js') as typeof import('jalaali-js')
 import { toPersianDigits } from '../utils/persian'
 
 export interface JalaliDate {
